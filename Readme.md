@@ -11,3 +11,7 @@
 1. `chmod +x .solution.rb`
 2. `ruby solution.rb`
 3. To see the result, open `index.html` located in the project root in your browser.
+
+
+### Solution Screenshot
+![Solution A](./images/sample.png)
