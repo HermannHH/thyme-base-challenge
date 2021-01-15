@@ -81,7 +81,7 @@ RSpec.describe Parser, type: :request do
     it { expect(subject.send(:wrap_text)).to eq(html_output) }
   end
 
-  describe ".call" do
+  describe "#call" do
     it { expect(subject.call).to be_a_kind_of(Integer) }
   end
 

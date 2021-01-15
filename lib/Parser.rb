@@ -95,7 +95,4 @@ class Parser
   def wrap_text
     "<p>#{full_text_array.join}</p>"
   end
-
-
-
 end
