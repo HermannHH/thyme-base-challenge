@@ -50,27 +50,18 @@ class Parser
       unless inclusive_line_breaks.empty?
         inclusive_line_breaks.each do |ln|
           if ln == inclusive_line_breaks.first
-            # Add closing before
-            # Add opening on start
             words[rule[:start]] = "<mark title='#{rule[:comment]}' style='background-color: #{rule[:color]};'>" + words[rule[:start]]
             words[ln - 1] = words[ln - 1] + "</mark>"
           else
-            # Add closing before
-            # Add opening after
             words[ln] = "<mark title='#{rule[:comment]}' style='background-color: #{rule[:color]};'>" + words[ln]
             words[ln - 1] = words[ln - 1] + "</mark>"
           end
 
-          # IF LAST LINE BREAK USE END ELSE ADD BEFORE LINE BREAK
           if ln == inclusive_line_breaks.last
-            # Add closing on end
-            # Add opening after
 
             words[ln] = "<mark title='#{rule[:comment]}' style='background-color: #{rule[:color]};'>" + words[ln]
             words[closing_index] = words[closing_index] + "</mark>"
           else
-            # Add closing before
-            # Add opening after
             words[ln] = "<mark title='#{rule[:comment]}' style='background-color: #{rule[:color]};'>" + words[ln]
             words[ln - 1] = words[ln - 1] + "</mark>"
           end
